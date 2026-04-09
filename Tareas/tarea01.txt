@@ -1,0 +1,792 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260409151133
+Username: DESKTOP-BM3LOMG\jvess
+RunAs User: DESKTOP-BM3LOMG\jvess
+Configuration Name: 
+Machine: DESKTOP-BM3LOMG (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 5400
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\jvess\ECON 520\repo-curso-2026\curso-E520-2026C1\Tareas\tarea01.txt
+PS C:\Users\jvess> pwd
+
+Path
+----
+C:\Users\jvess
+
+
+PS C:\Users\jvess> cd /
+PS C:\> pwd
+
+Path
+----
+C:\
+
+
+PS C:\> cd ..
+PS C:\> whoami
+desktop-bm3lomg\jvess
+PS C:\> cd /users/jvess/onedrive/desktop
+PS C:\users\jvess\onedrive\desktop> pwd
+
+Path
+----
+C:\users\jvess\onedrive\desktop
+
+
+PS C:\users\jvess\onedrive\desktop> cd~
+cd~ : The term 'cd~' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ cd~
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (cd~:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+cd~ : The term 'cd~' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ cd~
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (cd~:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\users\jvess\onedrive\desktop> cd ~
+PS C:\Users\jvess> cd documents
+PS C:\Users\jvess\documents> cd ..
+PS C:\Users\jvess> mkdir /tmp/tutorial
+
+
+    Directory: C:\tmp
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:13 p. m.                tutorial
+
+
+PS C:\Users\jvess> cd /tmp/tutorial
+PS C:\tmp\tutorial> mkdir dir1, dir2, dir3
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:15 p. m.                dir1
+d-----     09/04/2026  03:15 p. m.                dir2
+d-----     09/04/2026  03:15 p. m.                dir3
+
+
+PS C:\tmp\tutorial> mkdir
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\tmp\tutorial> ls
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:15 p. m.                dir1
+d-----     09/04/2026  03:15 p. m.                dir2
+d-----     09/04/2026  03:15 p. m.                dir3
+
+
+PS C:\tmp\tutorial> mkdir -p dir4/dir5/dir6
+
+
+    Directory: C:\tmp\tutorial\dir4\dir5
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:16 p. m.                dir6
+
+
+PS C:\tmp\tutorial> cd dir4
+PS C:\tmp\tutorial\dir4> ls
+
+
+    Directory: C:\tmp\tutorial\dir4
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:16 p. m.                dir5
+
+
+PS C:\tmp\tutorial\dir4> cd tutorial
+cd : Cannot find path 'C:\tmp\tutorial\dir4\tutorial' because it does not exist.
+At line:1 char:1
++ cd tutorial
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\tmp\tutorial\dir4\tutorial:String) [Set-Location], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Cannot find path 'C:\tmp\tutorial\dir4\tutorial' because it does not exist.
+At line:1 char:1
++ cd tutorial
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\tmp\tutorial\dir4\tutorial:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\tmp\tutorial\dir4> cd ..
+PS C:\tmp\tutorial> mkdir "another folder"
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                another folder
+
+
+PS C:\tmp\tutorial> ls
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                another folder
+d-----     09/04/2026  03:15 p. m.                dir1
+d-----     09/04/2026  03:15 p. m.                dir2
+d-----     09/04/2026  03:15 p. m.                dir3
+d-----     09/04/2026  03:16 p. m.                dir4
+
+
+PS C:\tmp\tutorial> mkdir "folder 1"
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                folder 1
+
+
+PS C:\tmp\tutorial> mkdir "folder 2"
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                folder 2
+
+
+PS C:\tmp\tutorial> mkdir "folder 3"
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                folder 3
+
+
+PS C:\tmp\tutorial> mkdir "folder 4"
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                folder 4
+
+
+PS C:\tmp\tutorial> mkdir "folder 5"
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                folder 5
+
+
+PS C:\tmp\tutorial> mkdir "folder 6"
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                folder 6
+
+
+PS C:\tmp\tutorial> mkdir "folder 6"/ "folder 7"
+>> TerminatingError(mkdir): "A positional parameter cannot be found that accepts argument '/'."
+mkdir : A positional parameter cannot be found that accepts argument '/'.
+At line:1 char:1
++ mkdir "folder 6"/ "folder 7"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+mkdir : A positional parameter cannot be found that accepts argument '/'.
+At line:1 char:1
++ mkdir "folder 6"/ "folder 7"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+
+PS C:\tmp\tutorial> mkdir "folder 6" / "folder 7"
+>> TerminatingError(mkdir): "A positional parameter cannot be found that accepts argument '/'."
+mkdir : A positional parameter cannot be found that accepts argument '/'.
+At line:1 char:1
++ mkdir "folder 6" / "folder 7"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+mkdir : A positional parameter cannot be found that accepts argument '/'.
+At line:1 char:1
++ mkdir "folder 6" / "folder 7"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+
+PS C:\tmp\tutorial> mkdir -p "folder 6" / "folder 7"
+>> TerminatingError(mkdir): "A positional parameter cannot be found that accepts argument '/'."
+mkdir : A positional parameter cannot be found that accepts argument '/'.
+At line:1 char:1
++ mkdir -p "folder 6" / "folder 7"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+mkdir : A positional parameter cannot be found that accepts argument '/'.
+At line:1 char:1
++ mkdir -p "folder 6" / "folder 7"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+
+PS C:\tmp\tutorial> mkdir -p "folder 6"/"folder 7"
+>> TerminatingError(mkdir): "A positional parameter cannot be found that accepts argument '/folder 7'."
+mkdir : A positional parameter cannot be found that accepts argument '/folder 7'.
+At line:1 char:1
++ mkdir -p "folder 6"/"folder 7"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+mkdir : A positional parameter cannot be found that accepts argument '/folder 7'.
+At line:1 char:1
++ mkdir -p "folder 6"/"folder 7"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+
+PS C:\tmp\tutorial> ls >output.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="another folder"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir1"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir2"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir3"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir4"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder 1"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder 2"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder 3"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder 4"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder 5"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder 6"
+>> ParameterBinding(Out-File): name="InputObject"; value="output.txt"
+PS C:\tmp\tutorial> ls
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                another folder
+d-----     09/04/2026  03:15 p. m.                dir1
+d-----     09/04/2026  03:15 p. m.                dir2
+d-----     09/04/2026  03:15 p. m.                dir3
+d-----     09/04/2026  03:16 p. m.                dir4
+d-----     09/04/2026  03:17 p. m.                folder 1
+d-----     09/04/2026  03:17 p. m.                folder 2
+d-----     09/04/2026  03:17 p. m.                folder 3
+d-----     09/04/2026  03:17 p. m.                folder 4
+d-----     09/04/2026  03:17 p. m.                folder 5
+d-----     09/04/2026  03:17 p. m.                folder 6
+-a----     09/04/2026  03:19 p. m.           5410 output.txt
+
+
+PS C:\tmp\tutorial> cat output.txt
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                another folder
+d-----     09/04/2026  03:15 p. m.                dir1
+d-----     09/04/2026  03:15 p. m.                dir2
+d-----     09/04/2026  03:15 p. m.                dir3
+d-----     09/04/2026  03:16 p. m.                dir4
+d-----     09/04/2026  03:17 p. m.                folder 1
+d-----     09/04/2026  03:17 p. m.                folder 2
+d-----     09/04/2026  03:17 p. m.                folder 3
+d-----     09/04/2026  03:17 p. m.                folder 4
+d-----     09/04/2026  03:17 p. m.                folder 5
+d-----     09/04/2026  03:17 p. m.                folder 6
+-a----     09/04/2026  03:19 p. m.              0 output.txt
+
+
+PS C:\tmp\tutorial> cat
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\tmp\tutorial> echo "esto es una prueba"
+esto es una prueba
+PS C:\tmp\tutorial> echo "esto es una prueba" > prueba1.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una prueba"
+PS C:\tmp\tutorial> echo "esto es una segunda prueba" > prueba2.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una segunda prueba"
+PS C:\tmp\tutorial> echo "esto es una tercera prueba" > prueba3.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> ls
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                another folder
+d-----     09/04/2026  03:15 p. m.                dir1
+d-----     09/04/2026  03:15 p. m.                dir2
+d-----     09/04/2026  03:15 p. m.                dir3
+d-----     09/04/2026  03:16 p. m.                dir4
+d-----     09/04/2026  03:17 p. m.                folder 1
+d-----     09/04/2026  03:17 p. m.                folder 2
+d-----     09/04/2026  03:17 p. m.                folder 3
+d-----     09/04/2026  03:17 p. m.                folder 4
+d-----     09/04/2026  03:17 p. m.                folder 5
+d-----     09/04/2026  03:17 p. m.                folder 6
+-a----     09/04/2026  03:19 p. m.           5410 output.txt
+-a----     09/04/2026  03:20 p. m.             42 prueba1.txt
+-a----     09/04/2026  03:20 p. m.             58 prueba2.txt
+-a----     09/04/2026  03:21 p. m.             58 prueba3.txt
+
+
+PS C:\tmp\tutorial> cat prueba1.txt, prueba2.txt, prueba3.txt
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+PS C:\tmp\tutorial> cat p*
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+PS C:\tmp\tutorial> cat p* > combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una segunda prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> cat combi.txt
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+PS C:\tmp\tutorial> cat p* > combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una segunda prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> cat combi.txt
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+PS C:\tmp\tutorial> cat p* >> combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una segunda prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> echo "esto es una tercera prueba" >> combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> echo "esto es una tercera prueba" >> combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> echo "esto es una tercera prueba" >> combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> cat p* >> combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una segunda prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> cat p* >> combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una segunda prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> cat combi.txt
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una tercera prueba
+esto es una tercera prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+PS C:\tmp\tutorial> cat p* >> combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una segunda prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> cat p* >> combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una segunda prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> cat p* >> combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una segunda prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> cat p* >> combi.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una segunda prueba"
+>> ParameterBinding(Out-File): name="InputObject"; value="esto es una tercera prueba"
+PS C:\tmp\tutorial> cat combi.txt
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una tercera prueba
+esto es una tercera prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+PS C:\tmp\tutorial> more combi.txt
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una tercera prueba
+esto es una tercera prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+PS C:\tmp\tutorial> mv combi.txt dir1
+PS C:\tmp\tutorial> ls
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                another folder
+d-----     09/04/2026  03:23 p. m.                dir1
+d-----     09/04/2026  03:15 p. m.                dir2
+d-----     09/04/2026  03:15 p. m.                dir3
+d-----     09/04/2026  03:16 p. m.                dir4
+d-----     09/04/2026  03:17 p. m.                folder 1
+d-----     09/04/2026  03:17 p. m.                folder 2
+d-----     09/04/2026  03:17 p. m.                folder 3
+d-----     09/04/2026  03:17 p. m.                folder 4
+d-----     09/04/2026  03:17 p. m.                folder 5
+d-----     09/04/2026  03:17 p. m.                folder 6
+-a----     09/04/2026  03:19 p. m.           5410 output.txt
+-a----     09/04/2026  03:20 p. m.             42 prueba1.txt
+-a----     09/04/2026  03:20 p. m.             58 prueba2.txt
+-a----     09/04/2026  03:21 p. m.             58 prueba3.txt
+
+
+PS C:\tmp\tutorial> ls dir1
+
+
+    Directory: C:\tmp\tutorial\dir1
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     09/04/2026  03:23 p. m.           1386 combi.txt
+
+
+PS C:\tmp\tutorial> mv dir1/* .
+PS C:\tmp\tutorial> ls
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                another folder
+d-----     09/04/2026  03:23 p. m.                dir1
+d-----     09/04/2026  03:15 p. m.                dir2
+d-----     09/04/2026  03:15 p. m.                dir3
+d-----     09/04/2026  03:16 p. m.                dir4
+d-----     09/04/2026  03:17 p. m.                folder 1
+d-----     09/04/2026  03:17 p. m.                folder 2
+d-----     09/04/2026  03:17 p. m.                folder 3
+d-----     09/04/2026  03:17 p. m.                folder 4
+d-----     09/04/2026  03:17 p. m.                folder 5
+d-----     09/04/2026  03:17 p. m.                folder 6
+-a----     09/04/2026  03:23 p. m.           1386 combi.txt
+-a----     09/04/2026  03:19 p. m.           5410 output.txt
+-a----     09/04/2026  03:20 p. m.             42 prueba1.txt
+-a----     09/04/2026  03:20 p. m.             58 prueba2.txt
+-a----     09/04/2026  03:21 p. m.             58 prueba3.txt
+
+
+PS C:\tmp\tutorial> mv combi.txt dir3
+PS C:\tmp\tutorial> mv p* dir2
+PS C:\tmp\tutorial> ls dir3
+
+
+    Directory: C:\tmp\tutorial\dir3
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     09/04/2026  03:23 p. m.           1386 combi.txt
+
+
+PS C:\tmp\tutorial> ls dir2
+
+
+    Directory: C:\tmp\tutorial\dir2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     09/04/2026  03:20 p. m.             42 prueba1.txt
+-a----     09/04/2026  03:20 p. m.             58 prueba2.txt
+-a----     09/04/2026  03:21 p. m.             58 prueba3.txt
+
+
+PS C:\tmp\tutorial> mv dir3/combi.txt dir4/dir5/dir6
+PS C:\tmp\tutorial> ls dir4/dir5/dir6
+
+
+    Directory: C:\tmp\tutorial\dir4\dir5\dir6
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----     09/04/2026  03:23 p. m.           1386 combi.txt
+
+
+PS C:\tmp\tutorial> cp dir4/dir5/dir6/combi.txt
+PS C:\tmp\tutorial> cp dir4/dir5/dir6/combi.txt .
+PS C:\tmp\tutorial> ls dir4/dir5
+
+
+    Directory: C:\tmp\tutorial\dir4\dir5
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:26 p. m.                dir6
+
+
+PS C:\tmp\tutorial> ls
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                another folder
+d-----     09/04/2026  03:23 p. m.                dir1
+d-----     09/04/2026  03:25 p. m.                dir2
+d-----     09/04/2026  03:25 p. m.                dir3
+d-----     09/04/2026  03:16 p. m.                dir4
+d-----     09/04/2026  03:17 p. m.                folder 1
+d-----     09/04/2026  03:17 p. m.                folder 2
+d-----     09/04/2026  03:17 p. m.                folder 3
+d-----     09/04/2026  03:17 p. m.                folder 4
+d-----     09/04/2026  03:17 p. m.                folder 5
+d-----     09/04/2026  03:17 p. m.                folder 6
+-a----     09/04/2026  03:23 p. m.           1386 combi.txt
+-a----     09/04/2026  03:19 p. m.           5410 output.txt
+
+
+PS C:\tmp\tutorial> cp combi.txt backup.txt
+PS C:\tmp\tutorial> mv backup.txt copia.txt
+PS C:\tmp\tutorial> mv "folder 1" folder-1
+PS C:\tmp\tutorial> mv "folder 2" folder-2
+PS C:\tmp\tutorial> mv "folder 3" folder-3
+PS C:\tmp\tutorial> mv "folder 4" folder-4
+PS C:\tmp\tutorial> mv "folder 5" folder-5
+PS C:\tmp\tutorial> mv "folder 6" folder-6
+PS C:\tmp\tutorial> ls
+
+
+    Directory: C:\tmp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----     09/04/2026  03:17 p. m.                another folder
+d-----     09/04/2026  03:23 p. m.                dir1
+d-----     09/04/2026  03:25 p. m.                dir2
+d-----     09/04/2026  03:25 p. m.                dir3
+d-----     09/04/2026  03:16 p. m.                dir4
+d-----     09/04/2026  03:17 p. m.                folder-1
+d-----     09/04/2026  03:17 p. m.                folder-2
+d-----     09/04/2026  03:17 p. m.                folder-3
+d-----     09/04/2026  03:17 p. m.                folder-4
+d-----     09/04/2026  03:17 p. m.                folder-5
+d-----     09/04/2026  03:17 p. m.                folder-6
+-a----     09/04/2026  03:23 p. m.           1386 combi.txt
+-a----     09/04/2026  03:23 p. m.           1386 copia.txt
+-a----     09/04/2026  03:19 p. m.           5410 output.txt
+
+
+PS C:\tmp\tutorial> rm dir4/dir5/dir6/combi.txt backup.txt
+>> TerminatingError(Remove-Item): "A positional parameter cannot be found that accepts argument 'backup.txt'."
+Remove-Item : A positional parameter cannot be found that accepts argument 'backup.txt'.
+At line:1 char:1
++ rm dir4/dir5/dir6/combi.txt backup.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Remove-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : A positional parameter cannot be found that accepts argument 'backup.txt'.
+At line:1 char:1
++ rm dir4/dir5/dir6/combi.txt backup.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Remove-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+PS C:\tmp\tutorial> rm folder-*
+PS C:\tmp\tutorial> gc combi.txt | measure -l
+
+Lines Words Characters Property
+----- ----- ---------- --------
+   27
+
+
+PS C:\tmp\tutorial> ls > filelist.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="another folder"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir1"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir2"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir3"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir4"
+>> ParameterBinding(Out-File): name="InputObject"; value="combi.txt"
+>> ParameterBinding(Out-File): name="InputObject"; value="copia.txt"
+>> ParameterBinding(Out-File): name="InputObject"; value="filelist.txt"
+>> ParameterBinding(Out-File): name="InputObject"; value="output.txt"
+PS C:\tmp\tutorial> gc filelist.txt | measure -l
+
+Lines Words Characters Property
+----- ----- ---------- --------
+   12
+
+
+PS C:\tmp\tutorial> rm filelist.txt
+PS C:\tmp\tutorial> ls ~ \
+ls : Second path fragment must not be a drive or UNC name.
+Parameter name: path2
+At line:1 char:1
++ ls ~ \
++ ~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\Users\jvess:String) [Get-ChildItem], ArgumentException
+    + FullyQualifiedErrorId : DirArgumentError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ls : Second path fragment must not be a drive or UNC name.
+Parameter name: path2
+At line:1 char:1
++ ls ~ \
++ ~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\Users\jvess:String) [Get-ChildItem], ArgumentException
+    + FullyQualifiedErrorId : DirArgumentError,Microsoft.PowerShell.Commands.GetChildItemCommand
+
+PS C:\tmp\tutorial> ls ~ 
+
+
+    Directory: C:\Users\jvess
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-r---     26/03/2026  11:44 p. m.                3D Objects
+d-r---     26/03/2026  11:44 p. m.                Contacts
+d-----     27/03/2026  11:44 p. m.                Documents
+d-r---     31/03/2026  12:04 p. m.                Downloads
+d-----     07/04/2026  11:15 a. m.                ECON 520
+d-r---     26/03/2026  11:44 p. m.                Favorites
+d-r---     26/03/2026  11:44 p. m.                Links
+d-r---     26/03/2026  11:44 p. m.                Music
+dar--l     07/04/2026  11:06 a. m.                OneDrive
+d-r---     26/03/2026  11:44 p. m.                Saved Games
+d-r---     26/03/2026  11:46 p. m.                Searches
+d-r---     27/03/2026  02:00 p. m.                Videos
+
+
+PS C:\tmp\tutorial> ls ~ | measure -l
+
+
+Lines Words Characters Property
+----- ----- ---------- --------
+   12
+
+
+PS C:\tmp\tutorial> cat combi.txt | sort | get-unique | measure -l
+
+Lines Words Characters Property
+----- ----- ---------- --------
+    3
+
+
+PS C:\tmp\tutorial> cat combi.txt | sort | get-unique | more
+esto es una prueba
+esto es una segunda prueba
+esto es una tercera prueba
+PS C:\tmp\tutorial> stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260409153637
+**********************
